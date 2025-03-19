@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Ponomar&display=swap');
+
+:root {
+    --col-1: #fc9d9a;
+    --col-2: #c8c8a9;
+    --col-3: #83af9b;
+
+    --col-4: #c6e5d9;
+    --col-5: #ae8fba;
+    --col-6: #f68c68;
+    --col-7: #acdeb2;
+
+    --bg-color-1: #f9cdad;
+    --bg-color-2: #ffdbd7;
+    --font-family: "Ponomar";
+}
+
+.container { max-width: 1200px; margin: auto; padding-block: 80px; display: flex; flex-wrap: wrap; column-gap: 20px; row-gap: 40px; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-family); }
+
+.col { width: 200px; height: 200px; border: 2px dashed black; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; transition: all ease-in-out .5s; }
+.colors-row-1 .col:hover { transform: scale(1.1) rotate(360deg); cursor: pointer; }
+.colors-row-2 .col:hover { transform: scale(1.1); cursor: pointer; border-radius: 50%; }
+
+.colors-row-1 { background-color: var(--bg-color-1); display: flex; justify-content: center; gap: 20px; padding-block: 60px;  }
+.colors-row-1 .col:nth-child(1) { background-color: var(--col-1); }
+.colors-row-1 .col:nth-child(2) { background-color: var(--col-2); }
+.colors-row-1 .col:nth-child(3) { background-color: var(--col-3); }
+
+.colors-row-2 { background-color: var(--bg-color-2); }
+.colors-row-2 .col:nth-child(1), .colors-row-2 .col:nth-child(5), .colors-row-2 .col:nth-child(9) { background-color: var(--col-4); }
+.colors-row-2 .col:nth-child(2), .colors-row-2 .col:nth-child(6), .colors-row-2 .col:nth-child(10) { background-color: var(--col-5); }
+.colors-row-2 .col:nth-child(3), .colors-row-2 .col:nth-child(7), .colors-row-2 .col:nth-child(11) { background-color: var(--col-6); }
+.colors-row-2 .col:nth-child(4), .colors-row-2 .col:nth-child(8), .colors-row-2 .col:nth-child(12) { background-color: var(--col-7); }
